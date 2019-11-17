@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mEventTxt = (TextView) findViewById(R.id.textView);
         mHackCb = (CheckBox) findViewById(R.id.hackCb);
         mCurrActivity = this;
-
+/*
         myTts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+ */
     }
 
     @Override
@@ -56,10 +58,12 @@ public class MainActivity extends AppCompatActivity {
     public void onClickTts(View v) {
         String toSpeak = "This is a sample text that should play with Android default TTS engine.";
         Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
-        if (mHackCb.isChecked()) {
-            // Stupid Android 8 "Oreo" hack to make media buttons work
+        //if (mHackCb.isChecked()) {
+
+            /*
+            //col play qui non si riprende dopo sleep
             final MediaPlayer mMediaPlayer;
-            mMediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.silent_sound);
+            mMediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.beep);
             mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mediaPlayer) {
@@ -67,8 +71,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
             mMediaPlayer.start();
-        }
-        myTts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+
+             */
+        //}
+        //myTts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     public void onClickHack(View v) {
