@@ -1,23 +1,22 @@
 package hyperionics.com.playerservicesample;
 
+import static android.media.session.PlaybackState.ACTION_PAUSE;
+import static android.media.session.PlaybackState.ACTION_PLAY;
+import static android.media.session.PlaybackState.ACTION_PLAY_PAUSE;
+
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.IBinder;
-import android.support.v4.media.MediaMetadataCompat;
-import android.support.v4.media.session.MediaButtonReceiver;
 import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v4.media.session.PlaybackStateCompat;
-import android.util.Log;
 import android.view.KeyEvent;
 
-import static android.support.v4.media.session.PlaybackStateCompat.ACTION_PAUSE;
-import static android.support.v4.media.session.PlaybackStateCompat.ACTION_PLAY;
-import static android.support.v4.media.session.PlaybackStateCompat.ACTION_PLAY_PAUSE;
+import androidx.media.session.MediaButtonReceiver;
+
 
 public class PlayerService extends Service {
     public static final String TAG = "MPS";
@@ -98,7 +97,7 @@ public class PlayerService extends Service {
                 MediaButtonReceiver.buildMediaButtonPendingIntent(
                         this,
                         null,
-                        ACTION_PLAY));
+                        ACTION_PLAY ));
 
 
         mediaSession.setMediaButtonReceiver(

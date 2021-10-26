@@ -1,10 +1,10 @@
 package hyperionics.com.playerservicesample;
 
+import static hyperionics.com.playerservicesample.PlayerService.TAG;
+
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.speech.tts.TextToSpeech;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -12,9 +12,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Locale;
-
-import static hyperionics.com.playerservicesample.PlayerService.TAG;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     TextToSpeech myTts;
